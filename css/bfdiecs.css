@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+  font: 1em/1.5 "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.3em;
+  background: #28282F;
+  overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #4e3c3e;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #f48b95;
+}
+
+.parallax-window {
+  min-height: 350px;
+  background: transparent;
+}
+
+/*CSS for page nav menu*/
+.section {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+  position: relative;
+}
+
+.section--menu {
+	position: relative;
+	overflow: hidden;
+  width: 100%;
+  border-top: #444 5px solid;
+}
+
+.menu {
+	line-height: 1;
+	margin: 0 auto;
+}
+
+.menu__list {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu__item {
+	display: block;
+	margin: 1em 0;
+}
+
+.menu__link {
+	font-size: 1.05em;
+	font-weight: bold;
+	display: block;
+	padding: 1em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+	outline: none;
+}
+
+/* Shylock (by @benhanks040888) */
+.menu--shylock .menu__link {
+	position: relative;
+	margin: 0 1em;
+	padding-right: 0;
+	padding-left: 0;
+	color: #b5b5b5;
+	-webkit-transition: color 0.4s;
+	transition: color 0.4s;
+}
+
+.menu--shylock .menu__item--current .menu__link,
+.menu--shylock .menu__item--current .menu__link:hover,
+.menu--shylock .menu__item--current .menu__link:focus {
+	color: #d94f5c;
+}
+
+.menu--shylock .menu__item--current .menu__link::after,
+.menu--shylock .menu__item--current .menu__link::before {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+
+.menu--shylock .menu__item--current .menu__link::before {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.menu--shylock .menu__link:hover,
+.menu--shylock .menu__link:focus {
+	color: #b5b5b5;
+}
+
+.menu--shylock .menu__link:hover::before,
+.menu--shylock .menu__link:focus::before {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.menu--shylock .menu__link::before,
+.menu--shylock .menu__link::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	-webkit-transform: scale3d(0, 1, 1);
+	transform: scale3d(0, 1, 1);
+	-webkit-transform-origin: center left;
+	transform-origin: center left;
+	-webkit-transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+	transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.menu--shylock .menu__link::before {
+	background: #b5b5b5;
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+.menu--shylock .menu__link::after {
+	background: #d94f5c;
+}
+/*End CSS for Shylock nav style*/
+
+.main-wrapper {
+  color: #fff;
+  background: #28282F;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content-bfdprofiles {
+  max-width: 56.5em;
+  padding: 40px 40px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-family: "Poppins";
+  color: #fff;
+  padding: 40px 60px;
+}
+
+.content h2 {
+  font-size: 1.15em;
+}
+
+.fire-iecs {
+  position: relative;
+  float: left;
+  width: 50%;
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: #fff 1px solid;
+}
+
+.ems-iecs {
+  position: relative;
+  float: right;
+  width: 50%;
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: #fff 1px solid;
+}

@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  background: #000;
+  height: 70px;
+  position: fixed;
+  z-index: 100;
+}
+
+nav #bfdlogo {
+  float: left;
+  display: block;
+  margin-left: 44px;
+  font-size: 30px;
+  line-height: 70px;
+  font-weight: bold;
+}
+
+nav #bfdlogo a {
+  color: #fff;
+  transition: all 0.3s ease-out;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+/*toggle button style*/
+
+#toggle {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease-in-out;
+}
+
+#toggle .span {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 5px auto;
+}
+
+#triangle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease-in-out;
+}
+
+#triangle #right {
+  transform: rotate(45deg) translateX(2px) translateY(4px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#triangle #bottom {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#triangle #left {
+  transform: rotate(-45deg) translateX(8px) translateY(-10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#square {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease-out;
+}
+
+#square #right {
+  transform: rotate(45deg) translateX(2px) translateY(4px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#square #bottom {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#square #left {
+  transform: rotate(-45deg) translateX(8px) translateY(-10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#square #top {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/*toggle script addClass*/
+
+#toggle.on #one {
+  transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#toggle.on #two {
+  opacity: 0;
+}
+
+#toggle.on #three {
+  transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#toggle.hide {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+}
+/*toggle triangle class for duty menu*/
+
+#triangle.on {
+  z-index: 999;
+}
+
+#triangle.on #right {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 5px auto;
+  transform: rotate(60deg) translateX(6px) translateY(-7.5px);
+  visibility: visible;
+  opacity: 1;
+}
+
+#triangle.on #bottom {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 5px auto;
+  transform: translateY(10px);
+  visibility: visible;
+  opacity: 1;
+}
+
+#triangle.on #left {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 5px auto;
+  transform: rotate(-60deg) translateX(8px) translateY(-15.5px);
+  visibility: visible;
+  opacity: 1;
+}
+
+/*toggle square class for committees menu*/
+
+#square.on {
+  z-index: 999;
+}
+
+#square.on #right {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 3px auto;
+  transform: rotate(90deg) translateY(-19px) translateX(7px);
+  visibility: visible;
+  opacity: 1;
+}
+
+#square.on #bottom {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 3px auto;
+  transform: translateY(21px);
+  visibility: visible;
+  opacity: 1;
+}
+
+#square.on #left {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 3px auto;
+  transform: rotate(-90deg) translateY(-19px) translateX(5px);
+  visibility: visible;
+  opacity: 1;
+}
+
+#square.on #top {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  margin: 3px auto;
+  transform: translateY(-30px);
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Full-screen Navigation style*/
+
+#navi {
+  top: 0px;
+  position: fixed;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-out;
+  overflow: auto;
+}
+
+#navi #menu li {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 50px;
+  min-height: 50px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#navi #menu li a {
+  color: #fff;
+  font-family: "Poppins";
+  transition: all 0.3s ease-in-out;
+}
+
+#navi #menu li a:hover {
+  color: #004896;
+  transition: all 0.3s ease-in-out;
+}
+
+#navi.active {
+  visibility: visible;
+  opacity: 0.99;
+}
+
+
+/*duty night crew menu*/
+
+#duty {
+  top: 0px;
+  position: fixed;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  overflow: auto;
+}
+
+#duty li {
+  display: block;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 50px;
+  min-height: 50px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#duty li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Poppins";
+  transition: all 0.3s ease-in-out;
+}
+
+#duty li a:hover {
+  color: #004896;
+  transition: all 0.3s ease-in-out;
+}
+
+#duty.active {
+  z-index: 200;
+  visibility: visible;
+  opacity: 0.99;
+}
+
+/*committees menu*/
+
+#committees {
+  top: 0px;
+  position: fixed;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  overflow: auto;
+}
+
+#committees li {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 50px;
+  min-height: 50px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+
+#committees li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Poppins";
+  transition: all 0.3s ease-in-out;
+}
+
+#committees li a:hover {
+  color: #004896;
+  transition: all 0.3s ease-in-out;
+}
+
+
+#committees.active {
+  z-index: 200;
+  visibility: visible;
+  opacity: 0.99;
+}
+
+/* logout button*/
+nav #navi #menu .nav-profile{
+  text-align: center;
+  color: #fff;
+}
+
+nav #navi #menu .nav-profile button {
+  margin: 30px;
+  width: 374px;
+  height: 60px;
+  font-family: "Poppins";
+  font-weight: lighter;
+  font-size: 35px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background-color: #000;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+nav #navi #menu .nav-profile button:hover {
+  background: #004896;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255,255,255,0.6);
+  cursor: pointer;
+}

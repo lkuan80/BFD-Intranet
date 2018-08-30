@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+
+html {
+  font: 1em/1.5 "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.3em;
+  background: #28282F;
+  overflow-x: hidden;
+}
+
+.parallax-window {
+  min-height: 350px;
+  background: transparent;
+}
+
+.header-widget {
+  width: 100%;
+  height: 250px;
+  background-color: #444;
+}
+
+.main-wrapper {
+  color: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400%;
+  font-family: "Poppins";
+  background: #28282F;
+}
+
+.content {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  padding-top: 60px;
+}
+
+#pro-pic {
+  left: 40px;
+  top: 100px;
+}
+
+#pro-pic img {
+  max-width: 240px;
+  border: 2px solid #000;
+  image-orientation: from-image;
+  border-radius: 50%;
+
+}
